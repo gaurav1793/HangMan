@@ -6,7 +6,7 @@ const Button = ({buttonType ="button" , text , styleType , onClickHandler}) => {
     <button
         type={buttonType}
         onClick={onClickHandler}
-        className={`px-4 py-2 ${getButtonStyle(styleType)} text-white rounded-md transition-all`}
+        className={` ${getButtonStyle(styleType)} text-white text-lg px-6 py-2 w-[100px] rounded-lg transition-all`}
     >
         {text}
     </button>

@@ -15,6 +15,7 @@ const TextInputForm = ({handleFormSubmit, handleTextInputChange, value, inputTyp
 
                     />
                 </div>
+                <div className='m-2 space-y-2'>
                 <div>
                     <Button
                         styleType='warning'
@@ -28,6 +29,7 @@ const TextInputForm = ({handleFormSubmit, handleTextInputChange, value, inputTyp
                         styleType='success'
                         buttonType='submit'
                     />
+                </div>
                 </div>
             </form>
 

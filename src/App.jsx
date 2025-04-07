@@ -7,7 +7,7 @@ import Playgame from './Pages/Playgame'
 const gk = createBrowserRouter([
   
   {
-    path:"/start",
+    path:"/",
     element:<Startgame/>
   },{
     path:"/play",

@@ -5,8 +5,8 @@ import LetterButton from '../Components/LetterButtons/LetterButton'
 import HangMan from '../Components/HangMan/HangMan'
 
 const Playgame = () => {
-    const { state } = useLocation()
-    const [step, setStep] = useState(0)
+    const { state } = useLocation();
+    const [step, setStep] = useState(0);
     const [guessedLetter, setGuessedLetter] = useState([])
 
     function onLetterClick(e) {
@@ -25,7 +25,7 @@ const Playgame = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-green-700 mb-6">🎮 Hangman Game</h1>
 
             <div className="text-4xl md:text-6xl font-mono tracking-widest mb-8">
-                <MaskedText text={state.wordSelected} usedLetters={guessedLetter} />
+                <MaskedText text={state?.wordSelected} usedLetters={guessedLetter} />
             </div>
             {
                 
@@ -36,7 +36,7 @@ const Playgame = () => {
                 <div className={`flex flex-col md:flex-row gap-8 w-full max-w-5xl items-start justify-center `}>
                     <div className="flex-1 bg-white p-4 rounded-lg shadow-md border border-gray-300">
                         <LetterButton
-                            text={state.wordSelected}
+                            text={state?.wordSelected}
                             guessedLetters={guessedLetter}
                             onLetterClick={onLetterClick}
                         />

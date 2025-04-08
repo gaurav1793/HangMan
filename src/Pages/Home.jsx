@@ -4,6 +4,7 @@ import Button from '../Components/Button/Button';
 
 const Home = () => {
     const [val , setVal]= useState('');
+    const [hint , setHint] = useState('');
     async function downloadData() {
         const response = await fetch('http://localhost:3000/words');
         const data =  await response.json();
@@ -12,6 +13,7 @@ const Home = () => {
         const idx = Math.floor(Math.random()*data.length);
         
         setVal(data[idx].wordValue);
+        setHint(data[idx].wordHint);
     }
     useEffect(() => {
         downloadData();
@@ -22,7 +24,7 @@ const Home = () => {
                 <h1 className="text-4xl font-bold text-green-700 mb-6">🚀 Start Hangman Game</h1>
 
                 <div className='m-2'>
-                    <Link to={'/play'} state={{wordSelected:val}}><Button text={'single Player'} styleType={'primary'} /></Link>
+                    <Link to={'/play'} state={{wordSelected:val ,wordHint:hint}}><Button text={'single Player'} styleType={'primary'} /></Link>
 
                 </div>
                 <br />
